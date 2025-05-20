@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body,html{
+    height: 100%;
+    margin: 0;
+ }  
+* {
+    box-sizing: border-box;
+}
+.black-head{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+.black-head>p{
+    margin-right: 75px;
+    font-size: 20px;
+}
+.IMG{
+    display: flex;
+    width: 100%;
+}
+.IMG>.ima{
+    width: 50%;
+    margin-left: 20px;
+}
+.IMG>.p{
+    width: 50%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    font-size: 20px;
+}
+.p>p{
+    cursor: pointer;
+}
+.p>input[type=text]{
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: white;
+    background-image: url('magnifying-glass-solid.svg');
+    background-position: 24px 10px; 
+    background-repeat: no-repeat;
+    background-size: 25%;
+    padding: 12px 20px 12px 50px;
+    width: 0%;
+    transition: width background-size background-position;
+}
+.p>input[type=text]:focus{
+    width:33.3%;
+    background-size: 10%;
+    background-position: 10px 10px;
+}
+.background{
+    display: flex;
+    justify-content: flex-end;
+    background-image: url("hero-bg.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.oxer{
+    position: absolute;
+    top:-48px;
+    left: 6%;
+    font-size:95px;
+    transform: rotate(90deg) scaleY(-1);
+}
+.arrow{
+    margin-top: 10%;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 10%;
+    height: 30%;
+}
+.arrow>img{
+    cursor: pointer;
+    border: 1px;
+    padding: 25px;
+    background-color:green;
+    border-radius: 50%;
+    margin: 15px;
+}
+.arrow>img:hover{
+    background: transparent;
+    color: white;
+    border: 1px solid green;
+}
+.green{
+    background-color: rgb(54, 240, 54);
+    display: flex;
+    justify-content: flex-end;
+}
+.about{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px;
+    width: 1250px;
+    height: 600px;
+    background-color: black;
+    box-shadow: -30px 30px 400px 400px rgb(54, 240, 54);
+}
+.about>img{
+    margin-right: 50px;
+    width: 800px;
+    height: 500px;
+}
+.about1{
+    font-size:larger;
+    width: 250px;
+    height: 400px;
+    color: white;
+    transform: translate(-10px ,0px);
+    transform: translate(0px,-50px);
+}
+.vl{
+    border: 2px solid white;
+    height: 75px;
+    width: 0px;
+    margin-left: 75px;
+}
+.READ{
+    border-radius: 50px;
+    background-color: black;
+    box-shadow: 0px 0px 5px 2px rgb(54, 240, 54);
+    width: 150px;
+    height: 50px;
+    color: white;
+}
+.READ:hover{
+    background-color:white;
+    color: black;
+}
+        </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">  
+        <script src="https://kit.fontawesome.com/90e706591e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="black-head">
+            <p><i class="fa-solid fa-phone"> </i> +01-1234567890</p>
+            <p><i class="fa-regular fa-envelope"> </i> mail@domain.com</p>
+            <p><i class="fa-solid fa-location-dot"> </i> Den Mark Loram ipusum</p>
+        </div>
+        <br>
+        <div class="IMG">
+            <div class="ima">
+                <img src="logo.png" id="logo">
+            </div>
+            <div class="p">
+                <p>HOME</p>
+                <p>WHY US</p>
+                <p>CONTACT</p>
+                <p>BLOG</p>
+                <input type="text" id="search" placeholder="Search">
+            </div>
+        </div>
+        <br>
+        <div class="background">
+            <div class="oxer">
+                <h1 style="color: white;">O<span style="color: green;">X</span><span style="color: green;">E</span><span style="color: green;">R</span></h1>
+            </div>
+            <div class="arrow">
+                <img src="right-angle.png">
+                <img src="left-angle.png">
+            </div>
+        </div>
+        <div class="green">
+            <div class="about">
+                <div class="about1">
+                    <h2>ABOUT CLASS</h2>
+                    <p>iusmod tempor incididunt ut<br>labore et dolore magna<br>aliqua. Ut enim ad minim<br>veniam, quis nostrud<br>exercitation ullamco laboris<br>iusmod tempor incididunt ut<br>labore et dolore magna<br>aliqua. Ut enim ad minim<br>veniam, quis nostrud exercitation ullamco laboris<br>nisi ut aliquipnisi ut<br>aliquipiusmod tempor<br>incididunt ut labore et</p>
+                    <p class="vl"></p>
+                    <button class="READ">READ MORE</button>
+                </div>
+                <img src="about-bg.jpg">
+            </div>
+        </div>
+    </body>
+</html>
