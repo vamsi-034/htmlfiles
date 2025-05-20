@@ -1,193 +1,712 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            body,html{
-    height: 100%;
-    margin: 0;
- }  
-* {
-    box-sizing: border-box;
-}
-.black-head{
+        <title>portfolio</title>
+        <style>html {
+    scroll-behavior: smooth;
+  }
+body{
+    background-image: linear-gradient(to right,#500ea0 0%, #0b0456 25%,white 25%,white 100%);
     display: flex;
-    justify-content: flex-end;
-    margin-top: 50px;
-    border: 1px solid black;
-    background-color: black;
+}
+.fixed{
+    position: fixed;
+    border: 0px solid;
+    width:25%;
+}
+.fixed img{
+    display:block;
+    justify-content: center;
+    translate: 38% 0%;
+    margin-top:10%;
+    border:2px solid white;
+    padding: 10px;
+    border-radius:50%;
+    width:200px;
+    height:200px;
+    max-width: 100%;
+}
+.fixed>h1,a{
+    display: flex;
+    justify-content:center;
     color: white;
+    text-decoration:none;
 }
-.black-head>p{
-    margin-right: 75px;
-    font-size: 20px;
-}
-.IMG{
-    display: flex;
-    width: 100%;
-}
-.IMG>.ima{
-    width: 50%;
-    margin-left: 20px;
-}
-.IMG>.p{
-    width: 50%;
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    font-size: 20px;
-}
-.p>p{
-    cursor: pointer;
-}
-.p>input[type=text]{
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 40px;
-    background-color: white;
-    background-image: url('magnifying-glass-solid.svg');
-    background-position: 24px 10px; 
-    background-repeat: no-repeat;
-    background-size: 25%;
-    padding: 12px 20px 12px 50px;
-    width: 0%;
-    transition: width background-size background-position;
-}
-.p>input[type=text]:focus{
-    width:33.3%;
-    background-size: 10%;
-    background-position: 10px 10px;
-}
-.background{
-    display: flex;
-    justify-content: flex-end;
-    background-image: url("hero-bg.jpg");
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-.oxer{
+.fixed>#git{
     position: absolute;
-    top:-48px;
-    left: 6%;
-    font-size:95px;
-    transform: rotate(90deg) scaleY(-1);
-}
-.arrow{
-    margin-top: 10%;
+    left: 30%;
     display: flex;
-    justify-content:flex-end;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    width: 10%;
-    height: 30%;
-}
-.arrow>img{
-    cursor: pointer;
-    border: 1px;
-    padding: 25px;
-    background-color:green;
-    border-radius: 50%;
-    margin: 15px;
-}
-.arrow>img:hover{
-    background: transparent;
-    color: white;
-    border: 1px solid green;
-}
-.green{
-    background-color: rgb(54, 240, 54);
-    display: flex;
-    justify-content: flex-end;
-}
-.about{
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border: 1px;
-    width: 1250px;
-    height: 600px;
-    background-color: black;
-    box-shadow: -30px 30px 400px 400px rgb(54, 240, 54);
-}
-.about>img{
-    margin-right: 50px;
-    width: 800px;
-    height: 500px;
-}
-.about1{
-    font-size:larger;
-    width: 250px;
-    height: 400px;
-    color: white;
-    transform: translate(-10px ,0px);
-    transform: translate(0px,-50px);
-}
-.vl{
+    margin-top: 15px;
+    color: #fff;
+    font-size:36px;
     border: 2px solid white;
-    height: 75px;
-    width: 0px;
-    margin-left: 75px;
-}
-.READ{
-    border-radius: 50px;
-    background-color: black;
-    box-shadow: 0px 0px 5px 2px rgb(54, 240, 54);
-    width: 150px;
+    padding:1px;
+    width: 50px;
     height: 50px;
+    border-radius: 50%;
+    transition: padding 2s;
+}
+.fixed>#git:hover{
+    padding: 5px;
+}
+.fixed>#link{
+    position: absolute;
+    left: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    color: #fff;
+    font-size:36px;
+    border: 2px solid white;
+    padding:1px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: padding 2s;
+}
+.fixed>#link:hover{
+    padding: 5px;
+    color: #0A66c2;
+}
+.container img{
+    border-bottom: 5px solid black;
+}
+#t{
+    border-right: 2px solid black;
+    font-size:2em;
+    width: 0;
+    animation: typing 4s infinite;
+    animation-direction: alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@keyframes typing{
+    from{
+        width:0;
+    }
+    to{
+        width: 22.7%;
+    }
+}
+.container1{
+    position: absolute;
+    left:25.5%;
+    top:101%;
+}
+.container2>h2{
+    color: black;
+    text-decoration:underline;
+    text-decoration-style:double;
+    text-decoration-color: black ;
+}
+.container2 img{
+    translate: 0% 10%;
+    border: 2px solid black;
+    border-radius:20%;
+    width:350px;
+    height: 350px;
+    transition: transform 1s;
+    cursor:pointer;
+    max-width: 70%;
+}
+#background{
+    position: absolute;
+    translate: 0% -91%;
+    border: 2px solid black;
+    border-radius:20%;
+    width:350px;
+    height: 350px;
+    background-color: black; 
+    z-index: -1;   
+}
+#background>h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 310px;
     color: white;
 }
-.READ:hover{
-    background-color:white;
-    color: black;
+.container2>img:hover{
+    transform: translate(0%,-11%);
 }
-        </style>
+#co{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:x-large;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.container3 ul{
+    font-size:larger;
+}
+.container3>h2{
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-decoration:underline;
+    text-decoration-style:double;
+    text-decoration-color: black ;
+}
+.cer{
+    color: black;
+    text-decoration: underline;
+    text-decoration-style:double;
+    text-decoration-color:black;
+    margin-top: 2px;
+}
+.container4{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height:650px;
+}
+.radio-btn{
+    display: none;
+}
+.img-cont{
+    display: flex;
+    overflow: hidden;
+    width: 300%;
+    height: 100%;
+    animation: slide-animation 10s infinite;
+}
+.images{
+    border: none;
+    width: 100%;
+    height: 90%;
+    border-radius: 12px;
+    gap:20px;
+}
+.images img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 20px;
+    margin-left: 50px;
+    overflow: hidden;
+}
+.btn-conta{
+    position: absolute;
+    bottom: 5px;
+    left: 45%;
+    transform: translateX(-50%);
+}
+.btn{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:#ccc;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: 1s linear;
+    color:#ccc;
+}
+.btn:hover{
+    background-color: #f6b93b;
+    width: 30px;
+    height: 30px;
+    color:#f6b93b;
+}
+.radio-btn:checked + .img-cont{
+    animation-play-state: paused;
+}
+.radio-btn:nth-child(1):checked ~ .img-cont{
+    transform: translateX(0%);
+    transition: 1s linear;
+}
+.radio-btn:nth-child(2):checked ~ .img-cont{
+    transform: translateX(-25%);
+    transition: 1s linear;
+}
+.radio-btn:nth-child(3):checked ~ .img-cont{
+    transform: translateX(-50%);
+    transition: 1s linear;
+}
+.radio-btn:nth-child(4):checked ~ .img-cont{
+    transform: translateX(-75%);
+    transition: 1s linear;
+}
+.container5>h2{
+    color: black;
+    text-decoration: underline;
+    text-decoration-style:double;
+    text-decoration-color:black;  
+}
+.container6{
+    display: flex;
+    justify-content: center;
+}
+.container6>form{
+    position: relative;
+    text-align: center;
+    border: 1px;
+    width: 400px;
+    height: 450px;
+    background-image: linear-gradient(#500ea0,#0b0456);
+    border-radius:20%;
+    margin-top: 90px;
+    margin-bottom: 110px;
+    color: white;
+}
+.container6 #fn,#ln,#email{
+width: 100%;
+padding: 0px 10px 0px;
+border: none;
+color:white;
+font-size: large;
+text-align: center;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value:0deg;
+    inherits: false;
+}
+.container6::after,.container6::before{
+    content:"";
+    position: absolute;
+    translate:0% 18.75%;
+    justify-content: center;
+    border: 1px;
+    background-image: conic-gradient(from var(--angle),red,orange,yellow,green,blue,indigo,violet);
+    z-index: -1;
+    width: 400px;
+    height: 450px;
+    border-radius: 20%;
+    padding:5px 5px 4px 5px;
+    animation: 3s spin linear infinite;
+}
+input{
+    background: transparent;
+}
+.container6::before{
+    filter: blur(2rem);
+    opacity: 0.75;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}</style>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">  
         <script src="https://kit.fontawesome.com/90e706591e.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="black-head">
-            <p><i class="fa-solid fa-phone"> </i> +01-1234567890</p>
-            <p><i class="fa-regular fa-envelope"> </i> mail@domain.com</p>
-            <p><i class="fa-solid fa-location-dot"> </i> Den Mark Loram ipusum</p>
+        <div class="fixed">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrKFctvXm82eaq_26_PPkaO2s3DigUyqDK2A&s">
+            <h1 id="git"><a href="https://github.com/vamsi-034/Web.git" target="_blank"><i class="fa-brands fa-github"></i></a></h1>
+            <h1 id="link"><a href="https://www.linkedin.com/in/kesava-krishna-vamsi-gadamsetty-4088b1246/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></h1>
+            <h1 style="margin-top: 100px;"><a href="#home"><i class="fa-solid fa-house"></i>HOME</a></h1>
+            <h1><a href='#about'><i class="fa-solid fa-user"></i>ABOUT</a></h1>
+            <h1><a href="#CERTIFICATIONS"><i class="fa-solid fa-certificate"></i>CERTIFICATIONS</a></h1>
+            <h1><a href="#RE"><i class="fa-solid fa-address-book"></i>CONTACT</a></h1>
         </div>
-        <br>
-        <div class="IMG">
-            <div class="ima">
-                <img src="logo.png" id="logo">
-            </div>
-            <div class="p">
-                <p>HOME</p>
-                <p>WHY US</p>
-                <p>CONTACT</p>
-                <p>BLOG</p>
-                <input type="text" id="search" placeholder="Search">
-            </div>
+
+        <div class="container" id="home">
+        <img src="https://t4.ftcdn.net/jpg/04/19/26/97/360_F_419269782_9LsP3TQndMVnZ2j3ZhTPhMjaqQpFAth9.jpg" style="position:absolute;right:0%;top:0%;width:75.05%;height: 102%;">
+        <h1 style="position: absolute;left:25.5%; top: 42%;color: white;">GADAMSETTY KESAVA KRISHNA VAMSI</h1>
+        <h2 style="position: absolute;left:25.5%; top: 52%; color: white;" id="t">I'M WEB DEVELOPER</h2>
         </div>
-        <br>
-        <div class="background">
-            <div class="oxer">
-                <h1 style="color: white;">O<span style="color: green;">X</span><span style="color: green;">E</span><span style="color: green;">R</span></h1>
-            </div>
-            <div class="arrow">
-                <img src="right-angle.png">
-                <img src="left-angle.png">
-            </div>
+
+    <div class="container1">
+            <div class="container2" id="about">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>portfolio</title>
+        <style>html {
+    scroll-behavior: smooth;
+  }
+body{
+    background-image: linear-gradient(to right,#500ea0 0%, #0b0456 25%,white 25%,white 100%);
+    display: flex;
+}
+.fixed{
+    position: fixed;
+    border: 0px solid;
+    width:25%;
+}
+.fixed img{
+    display:block;
+    justify-content: center;
+    translate: 38% 0%;
+    margin-top:10%;
+    border:2px solid white;
+    padding: 10px;
+    border-radius:50%;
+    width:200px;
+    height:200px;
+    max-width: 100%;
+}
+.fixed>h1,a{
+    display: flex;
+    justify-content:center;
+    color: white;
+    text-decoration:none;
+}
+.fixed>#git{
+    position: absolute;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    color: #fff;
+    font-size:36px;
+    border: 2px solid white;
+    padding:1px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: padding 2s;
+}
+.fixed>#git:hover{
+    padding: 5px;
+}
+.fixed>#link{
+    position: absolute;
+    left: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    color: #fff;
+    font-size:36px;
+    border: 2px solid white;
+    padding:1px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: padding 2s;
+}
+.fixed>#link:hover{
+    padding: 5px;
+    color: #0A66c2;
+}
+.container img{
+    border-bottom: 5px solid black;
+}
+#t{
+    border-right: 2px solid black;
+    font-size:2em;
+    width: 0;
+    animation: typing 4s infinite;
+    animation-direction: alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@keyframes typing{
+    from{
+        width:0;
+    }
+    to{
+        width: 22.7%;
+    }
+}
+.container1{
+    position: absolute;
+    left:25.5%;
+    top:101%;
+}
+.container2>h2{
+    color: black;
+    text-decoration:underline;
+    text-decoration-style:double;
+    text-decoration-color: black ;
+}
+.container2 img{
+    translate: 0% 10%;
+    border: 2px solid black;
+    border-radius:20%;
+    width:350px;
+    height: 350px;
+    transition: transform 1s;
+    cursor:pointer;
+    max-width: 70%;
+}
+#background{
+    position: absolute;
+    translate: 0% -91%;
+    border: 2px solid black;
+    border-radius:20%;
+    width:350px;
+    height: 350px;
+    background-color: black; 
+    z-index: -1;   
+}
+#background>h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 310px;
+    color: white;
+}
+.container2>img:hover{
+    transform: translate(0%,-11%);
+}
+#co{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:x-large;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.container3 ul{
+    font-size:larger;
+}
+.container3>h2{
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-decoration:underline;
+    text-decoration-style:double;
+    text-decoration-color: black ;
+}
+.cer{
+    color: black;
+    text-decoration: underline;
+    text-decoration-style:double;
+    text-decoration-color:black;
+    margin-top: 2px;
+}
+.container4{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height:650px;
+}
+.radio-btn{
+    display: none;
+}
+.img-cont{
+    display: flex;
+    overflow: hidden;
+    width: 300%;
+    height: 100%;
+    animation: slide-animation 10s infinite;
+}
+.images{
+    border: none;
+    width: 100%;
+    height: 90%;
+    border-radius: 12px;
+    gap:20px;
+}
+.images img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 20px;
+    margin-left: 50px;
+    overflow: hidden;
+}
+.btn-conta{
+    position: absolute;
+    bottom: 5px;
+    left: 45%;
+    transform: translateX(-50%);
+}
+.btn{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:#ccc;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: 1s linear;
+    color:#ccc;
+}
+.btn:hover{
+    background-color: #f6b93b;
+    width: 30px;
+    height: 30px;
+    color:#f6b93b;
+}
+.radio-btn:checked + .img-cont{
+    animation-play-state: paused;
+}
+.radio-btn:nth-child(1):checked ~ .img-cont{
+    transform: translateX(0%);
+    transition: 1s linear;
+}
+.radio-btn:nth-child(2):checked ~ .img-cont{
+    transform: translateX(-25%);
+    transition: 1s linear;
+}
+.radio-btn:nth-child(3):checked ~ .img-cont{
+    transform: translateX(-50%);
+    transition: 1s linear;
+}
+.radio-btn:nth-child(4):checked ~ .img-cont{
+    transform: translateX(-75%);
+    transition: 1s linear;
+}
+.container5>h2{
+    color: black;
+    text-decoration: underline;
+    text-decoration-style:double;
+    text-decoration-color:black;  
+}
+.container6{
+    display: flex;
+    justify-content: center;
+}
+.container6>form{
+    position: relative;
+    text-align: center;
+    border: 1px;
+    width: 400px;
+    height: 450px;
+    background-image: linear-gradient(#500ea0,#0b0456);
+    border-radius:20%;
+    margin-top: 90px;
+    margin-bottom: 110px;
+    color: white;
+}
+.container6 #fn,#ln,#email{
+width: 100%;
+padding: 0px 10px 0px;
+border: none;
+color:white;
+font-size: large;
+text-align: center;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value:0deg;
+    inherits: false;
+}
+.container6::after,.container6::before{
+    content:"";
+    position: absolute;
+    translate:0% 18.75%;
+    justify-content: center;
+    border: 1px;
+    background-image: conic-gradient(from var(--angle),red,orange,yellow,green,blue,indigo,violet);
+    z-index: -1;
+    width: 400px;
+    height: 450px;
+    border-radius: 20%;
+    padding:5px 5px 4px 5px;
+    animation: 3s spin linear infinite;
+}
+input{
+    background: transparent;
+}
+.container6::before{
+    filter: blur(2rem);
+    opacity: 0.75;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}</style>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">  
+        <script src="https://kit.fontawesome.com/90e706591e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="fixed">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrKFctvXm82eaq_26_PPkaO2s3DigUyqDK2A&s">
+            <h1 id="git"><a href="https://github.com/vamsi-034/Web.git" target="_blank"><i class="fa-brands fa-github"></i></a></h1>
+            <h1 id="link"><a href="https://www.linkedin.com/in/kesava-krishna-vamsi-gadamsetty-4088b1246/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></h1>
+            <h1 style="margin-top: 100px;"><a href="#home"><i class="fa-solid fa-house"></i>HOME</a></h1>
+            <h1><a href='#about'><i class="fa-solid fa-user"></i>ABOUT</a></h1>
+            <h1><a href="#CERTIFICATIONS"><i class="fa-solid fa-certificate"></i>CERTIFICATIONS</a></h1>
+            <h1><a href="#RE"><i class="fa-solid fa-address-book"></i>CONTACT</a></h1>
         </div>
-        <div class="green">
-            <div class="about">
-                <div class="about1">
-                    <h2>ABOUT CLASS</h2>
-                    <p>iusmod tempor incididunt ut<br>labore et dolore magna<br>aliqua. Ut enim ad minim<br>veniam, quis nostrud<br>exercitation ullamco laboris<br>iusmod tempor incididunt ut<br>labore et dolore magna<br>aliqua. Ut enim ad minim<br>veniam, quis nostrud exercitation ullamco laboris<br>nisi ut aliquipnisi ut<br>aliquipiusmod tempor<br>incididunt ut labore et</p>
-                    <p class="vl"></p>
-                    <button class="READ">READ MORE</button>
+
+        <div class="container" id="home">
+        <img src="https://t4.ftcdn.net/jpg/04/19/26/97/360_F_419269782_9LsP3TQndMVnZ2j3ZhTPhMjaqQpFAth9.jpg" style="position:absolute;right:0%;top:0%;width:75.05%;height: 102%;">
+        <h1 style="position: absolute;left:25.5%; top: 42%;color: white;">GADAMSETTY KESAVA KRISHNA VAMSI</h1>
+        <h2 style="position: absolute;left:25.5%; top: 52%; color: white;" id="t">I'M WEB DEVELOPER</h2>
+        </div>
+
+    <div class="container1">
+            <div class="container2" id="about">
+            <h2>ABOUT:</h2>
+            <p style="font-family: 'Times New Roman', Times, serif;font-size:x-large;">Pursuing a front-end developer position to leverage the knowledge of HTML5, CSS3,
+            and JavaScript to build beautiful and interactive user interfaces. 
+            Passionate about collaborating with cross-functional teams to deliver exceptional digital experiences.</p>
+            <img src="https://play-lh.googleusercontent.com/vco-LT_M58j9DIAxlS1Cv9uvzbRhB6cYIZJS7ocZksWRqoEPat_QXb6fVFi77lciJZQ=w526-h296-rw">
+            <div id="background"><h1>Vamsi</h1></div>
+            <h2 style="position: absolute;top:10%;left:33%;">PERSONAL DETAILS:</h2>
+            <ul style="position: absolute;top:13%;left:31%;font-size: larger;">
+                <li><b>Gender:</b>Male</li><br>
+                <li><b>Hobbies:</b>, Gym, social media browsing</li><br>
+                <li><b>Nationality:</b>Indian.</li><br>
+                <li><b>Languages Known:</b>Telugu, English.</li><br>
+                <li><b>Date of birth:</b>16-08-2001.</li><br>
+            </ul>
+            <h2 style="position: absolute;top:10%;left:65%;">CONTACTDETAILS:</h2>
+            <ul style="position: absolute;top:13%;left:63%;font-size: larger;">
+                <li><b>&#128241;Mobile Number:</b>+91-8008774618</li><br>
+                <li><b>&#128231;MAIL:</b><a href="mailto:kesavagadamsetty@gmail.com" style="color: blue;position: absolute;top:64%;left:40%;">kesavagadamsetty@gmail.com</a></li>                
+            </ul>
+
+            <div class="container3" id="EDUCATIONAL">
+                <h2>EDUCATIONAL BACKGROUND:</h2>
+                <ul>
+                <li><b>BACHELOR OF TECHNOLOGY (MECHANICAL ENGINEERING):</b>R.V.R & J.C College of engineering,2023, CGPA:6.78</li><br>
+                <li><b>INTERMEDIATE:</b>SRI CHAITHANYA JUNIOR COLLEGE, MPC,2019, CGPA: 6.38</li><br>
+                <li><b>S.S.C:</b>INDIAN SPRINGS,2017, GPA: 8.2</li>
+                </ul>
+            </div>
+            </div>
+            <br>
+            <h2 class="cer" id="CERTIFICATIONS">CERTIFICATIONS:</h2>
+            <div class="container4">
+                <input class="radio-btn" type="radio" name="slide" id="btn1">
+                <input class="radio-btn" type="radio" name="slide" id="btn2">
+                <input class="radio-btn" type="radio" name="slide" id="btn3">
+                <input class="radio-btn" type="radio" name="slide" id="btn4">
+
+                <div class="img-cont">
+                    <div class="images"><img class="ima" src="https://github.com/vamsi-034/Certifications/blob/main/Gadamsetty%20kesava%20Krishna%20vamsi_Nipuna_Certificate_SC.jpg?raw=true"></div>
+                    <div class="images"><img class="ima" src="https://github.com/vamsi-034/Certifications/blob/main/cloud.jpg?raw=true"></div>
+                    <div class="images"><img class="ima" src="https://github.com/vamsi-034/Certifications/blob/main/IBM%20Python_page-0001.jpg?raw=true"></div>
+                    <div class="images"><img class="ima" src="https://github.com/vamsi-034/Certifications/blob/main/IBM%20SQL_page-0001.jpg?raw=true"></div>
                 </div>
-                <img src="about-bg.jpg">
+
+                <div class="btn-conta">
+                    <label for="btn1" class="btn">.</label>
+                    <label for="btn2" class="btn">.</label>
+                    <label for="btn3" class="btn">.</label>
+                    <label for="btn4" class="btn">.</label>
+                </div>
             </div>
-        </div>
+            <br>
+            <div class="container5" id="RE">
+                <h2>CONTACT:</h2>
+                <div class="container6">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <legend style="text-align:center;font-size:xx-large;color: white;margin-top: 20px;margin-bottom: 20px;">
+                        Submit Details</legend><br>
+                        <input type="hidden" name="access_key" value="d9639af8-86de-4219-8752-6c688c754f67">
+                        <label for="fn">First Name</label><br>
+                        <input type="text" id="fn" name="fn" style="width:250px;height:30px;margin-bottom:5px;border-bottom: 1px solid white;"><br><br>
+                        <label for="ln">Last Name</label><br>
+                        <input type="text" id="ln" name="ln" style="width:250px;height:30px;margin-bottom:5px;border-bottom: 1px solid white;"><br><br>
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" style="width:250px;height:30px; margin-bottom:15px;border-bottom: 1px solid white;"><br><br>
+                        <br>
+                        <input type="submit" value="submit" style="width:75%;border-radius:10px;background-color: blueviolet;color:white;cursor: pointer;padding:16px 0px;font-size: 18px;justify-items:baseline;">
+                    </form>
+                    <br>
+                </div>
+            </div>
+    </div>
     </body>
 </html>
